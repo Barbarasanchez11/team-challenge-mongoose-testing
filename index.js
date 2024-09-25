@@ -13,3 +13,5 @@ app.use('/', routes)
 dbConnection()
  
 app.listen(PORT, () => console.log(`El servidor está escuchando en http://localhost:${PORT}`))
+
+module.exports = app

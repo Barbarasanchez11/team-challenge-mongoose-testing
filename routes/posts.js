@@ -46,7 +46,9 @@ router.put('/id/:_id', async (req,res) => {
     try {
         const idPost = req.params._id
         await Post.updateOne({_id: idPost}, {title: req.body.title, body: req.body.body})
-        const post = await Post.findById(idPost).exec()
+        const post = await Post.findById(idPost).exec()//Al añadir exec(), le dices a Mongoose que ejecute la consulta y 
+        //devuelva una Promesa que resolverá con el documento encontrado. Se puede usar sin exec, pero el uso,
+        //permite un manejo más explícito y a veces puede ser útil para encadenar más operaciones sobre la consulta.
         res.json(post)
     } catch (error){
         res.status(500).send({ message: 'There was a problem updating the posts' })
