@@ -1,10 +1,18 @@
 
 const mongoose = require('mongoose')
+const { required } = require('yargs')
 
 
 const PostSchema = new mongoose.Schema ({
-    title: String,
-    body: String
+    title:  {
+        type: String,
+        required: true
+    },
+
+    body: {
+        type: String,
+        required: true}
+        
 }, {timestamps:true})
 
 const Post = mongoose.model('Post', PostSchema )

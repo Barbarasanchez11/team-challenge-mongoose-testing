@@ -4,7 +4,7 @@
   "description": "Téneis que crear una API en Node.js utilizando Express con mongoose que consistirá en una red social, donde podras crear, ver publicaciones, actulizar y borrarlas.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "node --watch index.js",
     "test:watch": "jest --watchAll"
   },

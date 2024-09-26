@@ -59,15 +59,22 @@ router.delete("/id/:_id", async(req,res) => {
     try {
         const id = req.params._id
         const post = await Post.findByIdAndDelete(id)
-        res.send({mensaje: 'Post eliminado'})
+        res.send({mensaje: 'Post deleted'})
     } catch (error) {
         res.status(500).send({ message: 'There was a problem delete the post' })
     }
 })
 
-// DELETE /id/:_id: Endpoint para eliminar una publicación.
+router.get('/postsWithPagination', async (req, res) => {
+    const {page, limit} = req.query
 
-
-
+    try {
+        const posts = await Post.find().skip(1).limit(5);
+        res.status(200).json
+        
+    } catch (error) {
+        res.status(500).json({ message: 'There was a problem with the pagination.'});
+    }
+});
 
 module.exports = router
