@@ -26,7 +26,7 @@ describe('testing/create', ()=> {
 
     })
 
-     it("Should not create a post if body is missing", async () => {
+     it("Should not create a post if body is missing", async () => {//se puede crear un pos sin titulo pero no sin body
         const postWithoutBody = {
             title: "Prueba sin body"
             // body se omite intencionadamente
