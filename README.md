@@ -28,7 +28,7 @@ La estructura será la siguiente:
 ## EXTRA
 - GET /postsWithPagination: Endpoint para traer todas las publicaciones de 10 en 10 (paginación). Es decir, si estoy en la pagina 1  me muestra las 10 primeras publicaciones y si estoy en la pagina 2 me muestra las 10 siguientes.
 - Implementa validación a la hora de crear un post para que se rellene todos los campos y si no se hace que no deje crear la publicación.
-- Testea el endpoint GET /: Endpoint para traer todas las publicaciones.
+- Testea el endpoint GET /: Endpoint para traer todas las publicaciones. 
 
 1. Configuración
 - Lo primero es inicializar nuestro proyecto de node
